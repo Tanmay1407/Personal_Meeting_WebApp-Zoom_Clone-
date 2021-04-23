@@ -8,7 +8,11 @@ console.log(videoGrid);
 const myVideo = document.createElement('video');
 myVideo.muted = true;
 
-var peer = new Peer(undefined); 
+var peer = new Peer(undefined,{
+    path:'/peerjs',
+    host:'/',
+    port:'443'
+}); 
 
 
 
