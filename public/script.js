@@ -3,16 +3,15 @@ const socket = io('/');
 
 let userName = prompt("Enter Name", "User");
 const videoGrid = document.getElementById('video_grid');
-console.log(videoGrid);
-
 const myVideo = document.createElement('video');
 myVideo.muted = true;
 
-var peer = new Peer(undefined,{
+const peerProps = {
     path:'/peerjs',
     host:'/',
     port:'443'
-}); 
+}
+var peer = new Peer(undefined); 
 
 
 
@@ -136,3 +135,5 @@ const setStopVideo =()=>{
     `
     document.querySelector(".main_video_button").innerHTML = html;
 }
+
+
